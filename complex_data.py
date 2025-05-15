@@ -68,7 +68,10 @@ print(division_baja)
 """
 == es igual que -> a == b
 != es distinto que -> a != b
-< es menor que -> a < b
-<= es menor
-> es mayor que -> a > b
+
+< es menor que # a < b
+<= es menor o igual que # a < b
+
+> es mayor que # a > b
+>= es mayor o igual que # a > b
 """
