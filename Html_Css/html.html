@@ -1,0 +1,128 @@
+<!DOCTYPE html> <!--ESTRUCTURA DE LA PAGINA-->
+<html lang="es"> <!--IDIOMA DE LA PAGINA-->
+<head> <!--ENCABEZADO DE LA PAGINA (NO VISIBLE)-->
+    <!--METADATOS-->
+    <meta charset="UTF-8"> <!--Para que la codifique bien-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="todas las palabras claves de la pagina relacionadas">
+    <meta name="description" content="describe la pagina idea le 70 a 140 caracteres">
+    <meta name="author" content="Nombre del autor">
+    <meta name="copyright" content="Nombre de la empresa si cuenta con esto">
+    <meta name="robots" content="index/noindex"> <!--Que se muestre o no se muestre en la busqueda-->
+
+    <title>HTML</title><!--Titulo de la pagina en la parte de las pestañas-->
+    <link rel="icon" href="#Link del icono.ico"><!--Icono de la pagina en la parte de las pestañas-->
+
+    <link rel="stylesheet" href="css.css"> <!--Conectar los estilos css-->
+</head>
+
+<body> <!--CUERPO DE LA PAGINA VISIBLE!-->
+    <!--TITULOS-->
+    <h1>TITTLE</h1> <!--TITULO PRINCIPAL, SE USA 1 POR PAGINA!-->
+    <h2>TITTLE</h2>
+    <h3>TITTLE</h3>
+    <h4>TITTLE</h4>
+    <h5>TITTLE</h5>
+    <h6>TITTLE</h6>
+
+    <!--TEXTO-->
+    <a>Texto link</a>
+    <p>Parrafo</p>
+    <b>Negrita</b>
+
+    <!--LISTAS-->
+    <ul>Lista desordenada
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+
+    <!--MULTIMEDIA-->
+    <img src="#Link local o exterior" alt="describe la imagen para mejorar el ceo" title="titulo de la imagen y se muestra">
+    <video src="#Link local o exterior"></video>
+    <audio src="#Link local o exterior"></audio>
+
+    <!--Formularios-->
+    <Form>
+        <input type="text" value="Texto dentro de l campo">
+        <input type="password" required=""> <!-- requiered lo hace un campo obligatorio-->
+        <input type="number">
+        <input type="email">
+        <input type="color">
+        <input type="range" min="1" max="10"> <!-- Divido en 10 valores la linea-->
+        <input type="date">
+        <input type="time">
+        <input type="search"> <!--Campo para ingresar texto y buscar-->
+        <input type="button" value="Boton"> <!-- Value = Texto que su muestra dentro del boton-->
+        <input type="submit"> <!--Boton de enviar-->
+
+        <textarea readonly="">Con readonly solo puedes leer y no escribir nada dentrro</textarea>
+    </Form>
+
+
+    <!--ESTRUCTURA-->
+    <header>Parte superior!
+        <nav>Barra de navegacion</nav>
+    </header>
+
+    <article>Articulo completo
+        <section>Secciones del articulo
+        </section>
+    </article>
+
+    <aside>
+
+    </aside>
+
+    <footer>
+        Parte baja de la pagina!
+    </footer>
+
+    <!---->
+    <!--COMO CONTRUIR UNA BARRA DE NAVEGACION-->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Sobre Mi</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <article>
+        <section>
+            <h1>TITULO DEL ARTICULO</h1>
+            <h2>SUBTITULO DEL ARTICULO</h2>
+            <p>Parrafo del articulo</p>
+        </section>
+    </article>
+    <aside>
+        <h4>Contenido Extra</h4>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, nulla!</p>
+    </aside>
+
+    <footer>
+        <h4>Pagina por AUTHOR</h4>
+        <p>Contactanos:</p>
+        <a href="#">Link de contacto</a>
+    </footer>
+
+    <!--
+        TABLAS Y FILAS
+    -->
+    <h1>TABLA</h1>
+    <table border="1px">
+        <tr> <!--COLUMNAS AGRUPADAS-->
+            <td><b>Nombre</b></td> <!--FILAS-->
+            <td><b>Apellido</b></td>
+            <td><b>Edad</b></td>
+        </tr>
+        <tr> <!--COLUMNAS AGRUPADAS-->
+            <td>EL NOMBRE</td> <!--FILAS-->
+            <td>EL APELLIDO</td>
+            <td>LA EDAD</td>
+        </tr>
+    </table>
+
+</body>
+</html> 
