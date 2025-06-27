@@ -65,13 +65,11 @@ print(exponente)
 print(division_baja)
 
 #   Operadore de comparacion
-"""
-== es igual que -> a == b
-!= es distinto que -> a != b
-
-< es menor que # a < b
-<= es menor o igual que # a < b
-
-> es mayor que # a > b
->= es mayor o igual que # a > b
-"""
+# == es igual que -> a == b
+# != es distinto que -> a != b
+#
+# < es menor que # a < b
+# <= es menor o igual que # a < b
+#
+# > es mayor que # a > b
+# >= es mayor o igual que # a > b
