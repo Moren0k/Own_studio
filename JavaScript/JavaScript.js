@@ -208,11 +208,3 @@ for (let valor of iterable) {
     console.log(valor); // Muestra los valores del objeto iterable en la consola
     // Muestra los valores del iterable en la consola ("valor1", "valor2", "valor3")
 }
-
-//labels
-/* Las etiquetas (labels) se utilizan para identificar bucles y permitir saltar a ellos desde cualquier parte del código. 
-   La sintaxis básica es:
-   etiqueta: {
-    // Código a ejecutar
-   }
-   */
