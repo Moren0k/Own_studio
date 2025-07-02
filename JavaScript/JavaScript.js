@@ -208,3 +208,68 @@ for (let valor of iterable) {
     console.log(valor); // Muestra los valores del objeto iterable en la consola
     // Muestra los valores del iterable en la consola ("valor1", "valor2", "valor3")
 }
+
+//Funciones
+/* Las funciones son bloques de código reutilizables que realizan una tarea específica.
+   Se pueden definir con la palabra clave function, seguida del nombre de la función, paréntesis y llaves.
+   La sintaxis básica es:
+   function nombreFuncion(parametros) {
+       // Código a ejecutar
+   }
+   */
+function saludar() {
+    let nombre = "Mundo"; // Variable local dentro de la función
+    console.log("Hola, " + nombre);
+}
+    // Llamada a la función
+    saludar(); // Muestra "Hola, Mundo" en la consola
+
+//Funciones con parámetros y retorno
+/* Las funciones pueden aceptar parámetros y devolver un valor.
+   La sintaxis básica es:
+   function nombreFuncion(parametros) {
+       // Código a ejecutar
+       return valor; // Devuelve un valor
+   }
+   */
+function sumar() {
+    let numero1 = 2
+    let numero2 = 3
+    let resultado = numero1 + numero2; // Suma los dos Números
+    return resultado; // Devuelve el resultado de la suma
+}
+    // Llamada a la función y almacenamiento del resultado
+    let resultadoSuma = sumar(); // Llama a la función y guarda el resultado en la variable resultadoSuma
+    console.log(resultadoSuma); // Muestra el resultado de la suma en la consola (5)
+
+//Funciones con parámetros
+/* Las funciones pueden aceptar parámetros para recibir valores externos.
+   La sintaxis básica es:
+   function nombreFuncion(parametro1, parametro2) {
+       // Código a ejecutar
+       return valor; // Devuelve un valor
+   }
+   */
+function multiplicar(numero1, numero2) {
+    let resultado = numero1 * numero2; // Multiplica los dos números
+    return resultado; // Devuelve el resultado de la multiplicación
+}
+    // Llamada a la función con parámetros
+    let resultadoMultiplicacion = multiplicar(4, 5); // Llama a la función con los números 4 y 5
+    console.log(resultadoMultiplicacion); // Muestra el resultado de la multiplicación en la consola (20)
+    // Reutilización de la función con diferentes parámetros
+    let otroResultadoMultiplicacion = multiplicar(2, 3); // Llama a la función con los números 2 y 3
+    console.log(otroResultadoMultiplicacion); // Muestra el resultado de la multiplicación en la consola (6)
+
+//Funciones flecha
+/* Las funciones flecha son una forma más concisa de definir funciones en JavaScript.
+   La sintaxis básica es:
+   const nombreFuncion = (parametros) => {
+       // Código a ejecutar
+       return valor; // Devuelve un valor
+   }
+   */
+const saludarFlecha = (nombre) => console.log("Hola, " + nombre);
+    // Llamada a la función flecha
+    saludarFlecha("Mundo"); // Muestra "Hola, Mundo" en la consola
+
