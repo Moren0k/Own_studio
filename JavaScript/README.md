@@ -2,73 +2,59 @@
 
 ## CamelCase
 
-Ejemplo de uso de CamelCase  
-En JavaScript, es común usar CamelCase para nombrar variables y funciones.  
-Se inicia con una letra minúscula y cada nueva palabra comienza con una letra mayúscula.  
+Ejemplo de uso de CamelCase
+En JavaScript, es común usar CamelCase para nombrar variables y funciones.
+Se inicia con una letra minúscula y cada nueva palabra comienza con una letra mayúscula.
 Por ejemplo: nombreCompleto, calcularSuma, obtenerDatos.
 
-```js
 var ejemploDeUsoDeCamelCase
-```
 
 ## Variables
 
-palabraClave nombreVariable = valor;
+palabraClave nombreVariable = valor;.
 
 ```js
-let variableQuePuedeCambiar = 1;
-const variableQueNoPuedeCambiar = 0;
+let variableQuePuedeCambiar = "Soy una variable que puede cambiar su valor"; // Se declara una variable que puede cambiar su valor
+const variableQueNoPuedeCambiar = "Soy una variable que no puede cambiar su valor (constante)"; // Se declara una variable que no puede cambiar su valor (constante)
+var variableGlobal = "Soy una variable global"; // Se declara una variable global (no se recomienda su uso en la actualidad)
 
 let declararVariable; // Se declara la varible pero no se inicializa
-let declararIniciarVariable = "Hola"; // Se declara la variable y se inicializa
+let declararIniciarVariable = "Hola" // Se declara la variable y se inicializa
 ```
 
-## Tipos de Datos
+## Tipos De Datos
 
-```js
-String = "Cadena de texto";
-Number = 123;
-Boolean = true;
-```
+String = "Cadena de texto"; // Cadena de texto
+Number = 123; // Número
+Boolean = true; // Valor booleano (true o false)
 
-## undefined, null, NaN
+## Undefined, Null, NaN
 
-```js
-let undefined; // Fue declarada pero no inicializada.
-let Null = null // Para decir que la variable está vacía a propósito.
-let Nan = "abc" / 2; // Ocurre cuando: intentas hacer operaciones matemáticas con algo que no es numérico.
-```
+let undefined; // Fue declarada pero no inicializada
+let Null = null // Para decir que la variable está vacía a propósito
+let Nan = "abc" / 2; // Ocurre cuando: intentas hacer operaciones matemáticas con algo que no es numérico
 
-## Promt
+## Prompt
 
-```js
 prompt("Mensaje de solicitud", "valor predeterminado");
 let nombre = prompt("¿Cómo te llamas?", "Tu nombre acá"); // Lo guarda en la variable nombre
-```
 
 ## Alert
 
-```js
 alert("Mensaje de alerta"); // Muestra un mensaje emergente al usuario
-```
 
 ## Confirm
 
-```js
 let confirmacion = confirm("¿Estás seguro?"); // Muestra un mensaje de confirmación y guarda el resultado (true/false) en la variable confirmacion
-```
 
 ## Concatenación
 
-```js
 let saludo = "Hola" + " " + "Mundo"; // Une dos cadenas de texto
 let numeroTexto = "El número es: " + 5; // Convierte el número a texto y lo concatena
 let concatenacionCompleta = `Hola, ${saludo}, el número es: ${numeroTexto}`; // Usando comillas invertidas para una concatenación más legible
-```
 
 ## Operadores Aritméticos
 
-```js
 let suma = 5 + 3; // Suma
 let resta = 5 - 3; // Resta
 let multiplicacion = 5 * 3; // Multiplicación
@@ -76,23 +62,21 @@ let division = 5 / 3; // División
 let modulo = 5 % 3; // Módulo (resto de la división)
 incremento++; // Incrementa en 1
 decremento--; // Decrementa en 1
-```
 
-## Operadores de Asignación
+## Operadores De Asignación
 
-```js
+/* Los operadores de asignación se utilizan para asignar valores a variables. */
 let asignacion = 10; // Asignación simple
-asignacion += 5; // Asignación con suma
-asignacion -= 5; // Asignación con resta
-asignacion *= 2; // Asignación con multiplicación
-asignacion /= 2; // Asignación con división
-asignacion %= 2; // Asignación con módulo
-asignacion **= 2; // Asignación con exponenciación
-```
+asignacion += 5; // Asignación con suma (equivalente a asignacion = asignacion + 5) Es decir: 10 + 5 = 15
+asignacion -= 5; // Asignación con resta (equivalente a asignacion = asignacion - 5) Es decir: 10 - 5 = 5
+asignacion *= 2; // Asignación con multiplicación (equivalente a asignacion = asignacion * 2) Es decir: 10 * 2 = 10
+asignacion /= 2; // Asignación con división (equivalente a asignacion = asignacion / 2) Es decir: 10 / 2 = 5
+asignacion %= 2; // Asignación con módulo (equivalente a asignacion = asignacion % 2) Es decir: 10 % 2 = 0
+asignacion **= 2; // Asignación con exponenciación (equivalente a asignacion = asignacion ** 2) Es decir: 10 ** 2 = 100
 
-## Operadores de Comparación devuelven un valor booleano (true o false)
+## Operadores De Comparación
 
-```js
+/* Los operadores de comparación se utilizan para comparar valores y devuelven un valor booleano (true o false). */
 let esIgual = (5 == 5); // Igualdad (valor)
 let esIdentico = (5 === 5); // Identidad (valor y tipo)
 let esDiferente = (5 != 3); // Diferencia (valor)
@@ -101,234 +85,282 @@ let esMayor = (5 > 3); // Mayor que
 let esMenor = (5 < 3); // Menor que
 let esMayorOIgual = (5 >= 3); // Mayor o igual que
 let esMenorOIgual = (5 <= 3); // Menor o igual que
-```
 
 ## Operadores Lógicos
 
-```js
-let and = (true && false); // AND lógico
-let or = (true || false); // OR lógico
-let not = !true; // NOT lógico
-```
+/* Los operadores lógicos se utilizan para combinar o invertir valores booleanos. */
+let and = (true && false); // AND lógico es verdadero si ambos son verdaderos (Devuelve: false)
+let or = (true || false); // OR lógico es verdadero si al menos uno es verdadero (Devuelve: true)
+let not = !true; // NOT lógico invierte el valor booleano (Devuelve: false)
 
 ## Condicionales
 
-```js
+/* La estructura básica de una sentencia if es: */
 if (condicion) {
-    // Código si es verdadera
-} else if (otraCondicion) {
-    // Código si la otra condición es verdadera
-} else {
-    // Código si ninguna condición es verdadera
+    // Código a ejecutar si la condición es verdadera
 }
-```
+else if (otraCondicion) {
+    // Código a ejecutar si la otra condición es verdadera
+}
+else {
+    // Código a ejecutar si ninguna de las condiciones anteriores es verdadera
+};
 
-## arrays o listas
+## Arrays o Listas
 
-Un array es una colección de elementos, que pueden ser de cualquier tipo de dato.
+/* Un array es una colección de elementos, que pueden ser de cualquier tipo de dato. */
+let arrayVacio = []; // Un array vacío
+let arrayNumeros = [0, 1, 2]; // Un array con números
+let arrayCadenas = ["cero", "uno", "dos"]; // Un array con cadenas de texto
+let arrayBooleanos = [true, false, true]; // Un array con valores booleanos
 
-```js
-let arrayVacio = [];
-let arrayNumeros = [0, 1, 2];
-let arrayCadenas = ["cero", "uno", "dos"];
-let arrayBooleanos = [true, false, true];
-```
+## Mostrar Un Array En La Consola
 
-## Mostrar un array en la consola
+console.log(arrayNumeros); // Muestra el array en la consola
 
-```js
-console.log(arrayNumeros);
-```
+## Acceso A Elementos Del Array
 
-## Acceso a elementos del array
+/* Las posiciones de los elementos en un array comienzan desde 0. 
+   let array = [posición0, posición1, posición2];
+   para acceder a un elemento, se usa el nombreDelArray[posición];. */
+let primerElemento = arrayNumeros[0]; // Accede al primer elemento (0)
+let segundoElemento = arrayNumeros[1]; // Accede al segundo elemento (1)
 
-Las posiciones de los elementos en un array comienzan desde 0.  
-let array = [posición0, posición1, posición2];  
-para acceder a un elemento, se usa el nombreDelArray[posición];
+## Array Asociativo
 
-```js
-let primerElemento = arrayNumeros[0];
-let segundoElemento = arrayNumeros[1];
-```
-
-## Array asociativo
-
-Un array asociativo es un array que usa cadenas de texto como índices.  
-Se usa un objeto en lugar de un array para crearlo.
-
-```js
+/* Un array asociativo es un array que usa cadenas de texto como índices en lugar de números. 
+   Se usa un objeto en lugar de un array para crear un array asociativo. */
 let arrayAsociativo = {
     "posicion0": "valor1",
     "posicion1": "valor2",
     "posicion2": "valor3"
 };
-```
 
-## Acceso a elementos del array asociativo
+## Acceso A Elementos Del Array Asociativo
 
-```js
-let valor1 = arrayAsociativo["posicion0"];
-let valor2 = arrayAsociativo["posicion1"];
-let valor3 = arrayAsociativo["posicion2"];
-```
+let valor1 = arrayAsociativo["posicion0"]; // Accede al valor de la posición "posicion0" y muestra "valor1"
+let valor2 = arrayAsociativo["posicion1"]; // Accede al valor de la posición "posicion1" y muestra "valor2"
+let valor3 = arrayAsociativo["posicion2"]; // Accede al valor de la posición "posicion2" y muestra "valor3"
 
-## Bucles e Iteraciones
+## Bucles E Iteraciones
 
-Los bucles se utilizan para repetir un bloque de código varias veces.  
-Existen diferentes tipos como `for`, `while` y `do-while`.
+/* Los bucles se utilizan para repetir un bloque de código varias veces.
+   Existen diferentes tipos de bucles, como for, while y do-while. */
 
-## while
+## While
 
-Un bucle `while` ejecuta el bloque mientras la condición sea verdadera.
+/* Un bucle while ejecuta un bloque de código infinitamente mientras una condición sea verdadera. 
+   La sintaxis básica es:. */
+while (condicion) {
+    // Código a ejecutar
+};
 
-```js
-let contador = 0;
-while (contador < 5) {
-    contador++;
+contador = 0; // Inicializa un contador
+while (contador < 5) { // Mientras el contador sea menor que 5
+    contador++; // Incrementa el contador en 1
+    // Si el contador llega a 5, el bucle se detiene
 }
-```
 
-## do-while
+## Do-While
 
-Un bucle `do-while` se ejecuta al menos una vez.
-
-```js
-let contador = 0;
+/* Un bucle do-while ejecuta un bloque de código al menos una vez y luego verifica la condición. 
+   La sintaxis básica es:. */
 do {
-    contador++;
-} while (contador < 5);
-```
+    // Código a ejecutar
+} while (condicion);
 
-## break
+contador = 0; // Inicializa un contador
+do {
+    contador++; // Incrementa el contador en 1
+} while (contador < 5); // Mientras el contador sea menor que 5
+// El bucle se ejecuta al menos una vez, incluso si la condición es falsa desde el principio
 
-La instrucción `break` sale de un bucle antes de terminar.
+## Break
 
-```js
-let contador = 0;
-while (contador < 10) {
-    contador++;
-    if (contador === 5) {
-        break;
+/* La instrucción break se utiliza para salir de un bucle antes de que se complete su iteración. 
+   Se puede usar en cualquier tipo de bucle.
+   La sintaxis básica es:. */
+contador = 0; // Inicializa un contador
+while (contador < 10) { // Mientras el contador sea menor que 10
+    contador++; // Incrementa el contador en 1
+    if (contador === 5) { // Si el contador es igual a 5
+        break; // Sale del bucle
+        // El bucle se detiene cuando el contador llega a 5, por lo que no se muestra el valor 5 en la consola
     }
-}
-```
+};
 
-## for
+## For
 
-Un bucle `for` itera sobre un rango de valores o un array.
+/* Un bucle for se utiliza para iterar sobre un rango de valores o elementos de un array. 
+   La sintaxis básica es:
 
-```js
+   declararVariable; // Inicializa una variable
+   for (inicialización; condición; actualización) {
+    // Código a ejecutar
+   }. */
 for (let incremento = 0; incremento < 6; incremento++) {
-    console.log(incremento);
-}
-```
+    console.log(incremento); // Muestra los números del 0 al 5 en la consola
+};
 
-## continue
+## Continue
 
-La instrucción `continue` salta a la siguiente iteración del bucle.
-
-```js
-let contador = 0;
-while (contador < 10) {
-    contador++;
-    if (contador === 5) {
-        continue;
+/* La instrucción continue se utiliza para saltar a la siguiente iteración de un bucle. 
+   Se puede usar en cualquier tipo de bucle.
+   La sintaxis básica es:. */
+contador = 0; // Inicializa un contador
+while (contador < 10) { // Mientras el contador sea menor que 10
+    contador++; // Incrementa el contador en 1
+    if (contador === 5) { // Si el contador es igual a 5
+        continue; // Salta a la siguiente iteración del bucle
+        // El valor 5 no se muestra en la consola, pero el bucle continúa con el siguiente valor
     }
-}
-```
+};
 
-## for..in
+## For...In
 
-Itera sobre las propiedades enumerables de un objeto.
-
-```js
+/* El bucle for...in se utiliza para iterar sobre las propiedades enumerables de un objeto. 
+   La sintaxis básica es:
+   for (variable in objeto) {
+    // Código a ejecutar
+   }. */
 let objeto = ["valor1", "valor2", "valor3"];
 for (let i in objeto) {
-    console.log(i);
+    console.log(i); // Muestra las propiedades del objeto en la consola
+    // Muestra los índices de los valores del objeto en la consola (0, 1, 2)
 }
-```
 
-## for..of
+## For...Of
 
-Itera sobre los valores de un objeto iterable.
-
-```js
+/* El bucle for...of se utiliza para iterar sobre los valores de un objeto iterable, como un array. 
+   La sintaxis básica es:
+   for (variable of objetoIterable) {
+    // Código a ejecutar
+   }. */
 let iterable = ["valor1", "valor2", "valor3"];
 for (let valor of iterable) {
-    console.log(valor);
+    console.log(valor); // Muestra los valores del objeto iterable en la consola
+    // Muestra los valores del iterable en la consola ("valor1", "valor2", "valor3")
 }
-```
 
 ## Funciones
 
-Las funciones son bloques de código reutilizables.  
-Se definen con `function` y pueden aceptar parámetros.
-
-```js
+/* Las funciones son bloques de código reutilizables que realizan una tarea específica.
+   Se pueden definir con la palabra clave function, seguida del nombre de la función, paréntesis y llaves.
+   La sintaxis básica es:
+   function nombreFuncion(parametros) {
+       // Código a ejecutar
+   }. */
 function saludar() {
-    let nombre = "Mundo";
+    let nombre = "Mundo"; // Variable local dentro de la función
     console.log("Hola, " + nombre);
 }
-saludar();
-```
+    // Llamada a la función
+    saludar(); // Muestra "Hola, Mundo" en la consola
 
-## Funciones con parámetros y retorno
+## Funciones Con Parámetros y Retorno
 
-Las funciones pueden devolver valores.
-
-```js
+/* Las funciones pueden aceptar parámetros y devolver un valor.
+   La sintaxis básica es:
+   function nombreFuncion(parametros) {
+       // Código a ejecutar
+       return valor; // Devuelve un valor
+   }. */
 function sumar() {
-    let numero1 = 2;
-    let numero2 = 3;
-    let resultado = numero1 + numero2;
-    return resultado;
+    let numero1 = 2
+    let numero2 = 3
+    let resultado = numero1 + numero2; // Suma los dos Números
+    return resultado; // Devuelve el resultado de la suma
 }
+    // Llamada a la función y almacenamiento del resultado
+    let resultadoSuma = sumar(); // Llama a la función y guarda el resultado en la variable resultadoSuma
+    console.log(resultadoSuma); // Muestra el resultado de la suma en la consola (5)
 
-let resultadoSuma = sumar();
-console.log(resultadoSuma);
-```
+## Funciones Con Parámetros
 
-## Funciones con parámetros
-
-```js
+/* Las funciones pueden aceptar parámetros para recibir valores externos.
+   La sintaxis básica es:
+   function nombreFuncion(parametro1, parametro2) {
+       // Código a ejecutar
+       return valor; // Devuelve un valor
+   }. */
 function multiplicar(numero1, numero2) {
-    let resultado = numero1 * numero2;
-    return resultado;
+    let resultado = numero1 * numero2; // Multiplica los dos números
+    return resultado; // Devuelve el resultado de la multiplicación
 }
+    // Llamada a la función con parámetros
+    let resultadoMultiplicacion = multiplicar(4, 5); // Llama a la función con los números 4 y 5
+    console.log(resultadoMultiplicacion); // Muestra el resultado de la multiplicación en la consola (20)
+    // Reutilización de la función con diferentes parámetros
+    let otroResultadoMultiplicacion = multiplicar(2, 3); // Llama a la función con los números 2 y 3
+    console.log(otroResultadoMultiplicacion); // Muestra el resultado de la multiplicación en la consola (6)
 
-let resultadoMultiplicacion = multiplicar(4, 5);
-console.log(resultadoMultiplicacion);
+## Funciones Flecha
 
-let otroResultadoMultiplicacion = multiplicar(2, 3);
-console.log(otroResultadoMultiplicacion);
-```
-
-## Funciones flecha
-
-Una forma concisa de definir funciones.
-
+Las funciones flecha son una forma más concisa de definir funciones en JavaScript.
+   La sintaxis básica es:
+   const nombreFuncion = (parametros) => {
+       // Código a ejecutar
+       return valor; // Devuelve un valor
+   }.
 ```js
 const saludarFlecha = (nombre) => console.log("Hola, " + nombre);
-saludarFlecha("Mundo");
-```
+    // Llamada a la función flecha
+    saludarFlecha("Mundo"); // Muestra "Hola, Mundo" en la consola
+```js
 
 ## POO (Programación Orientada a Objetos)
 
-La POO organiza el código en objetos con propiedades y métodos.
+/* La Programación Orientada a Objetos (POO) es un paradigma de programación que
+   organiza el código en objetos que contienen propiedades y métodos.
+   En JavaScript, los objetos se pueden crear utilizando la sintaxis de objeto literal o mediante
+   la creación de clases. */
 
 ## Clases
 
-Una clase es una plantilla para crear objetos.
-
-```js
+/* Una clase es una plantilla para crear objetos. 
+   Define las propiedades y métodos que tendrán los objetos creados a partir de ella.
+   La sintaxis básica es:
+   class NombreClase {
+       constructor(parametros) {
+           // Inicialización de propiedades
+       }
+       metodo() {
+           // Código del método
+       }
+   }. */
 class animal {
-    constructor(especie, edad, color){
+    constructor(especie,edad,color){
         this.especie = especie;
         this.edad = edad;
         this.color = color;
         this.info = `Soy ${this.especie}, Tengo ${this.edad} años y soy de color ${this.color}.`;
+    };
+};
+let perro = new animal("perro",5,"blanco");
+console.log(perro.info);
+
+## Metodos
+
+/* Un método es una función definida dentro de una clase que puede ser llamada en los objetos creados a partir de esa clase.
+   La sintaxis básica es:
+   class NombreClase {
+       constructor(parametros) {
+           // Inicialización de propiedades
+       }
+       metodo() {
+           // Código del método
+       }
+   }. */
+class persona {
+    constructor(nombre,edad,altura){
+        this.nombre = nombre;
+        this.edad = edad;
+        this.altura = altura;
+        this.info = `Hola! Soy ${this.nombre}, Tengo ${this.edad} años y mi altura es ${this.altura}.`;
+    };
+    verInfo(){ // Método para mostrar la información de la persona
+        console.log(this.info)
     }
 }
-let perro = new animal("perro", 5, "blanco");
-console.log(perro.info);
-``
+let kevin = new persona("Kevin Moreno",20,"1.60cm")
+kevin.verInfo();
