@@ -273,3 +273,59 @@ const saludarFlecha = (nombre) => console.log("Hola, " + nombre);
     // Llamada a la función flecha
     saludarFlecha("Mundo"); // Muestra "Hola, Mundo" en la consola
 
+//POO (Programación Orientada a Objetos)
+/* La Programación Orientada a Objetos (POO) es un paradigma de programación que
+   organiza el código en objetos que contienen propiedades y métodos.
+   En JavaScript, los objetos se pueden crear utilizando la sintaxis de objeto literal o mediante
+   la creación de clases.*/
+
+//Clases
+/* Una clase es una plantilla para crear objetos. 
+   Define las propiedades y métodos que tendrán los objetos creados a partir de ella.
+   La sintaxis básica es:
+   class NombreClase {
+       constructor(parametros) {
+           // Inicialización de propiedades
+       }
+       metodo() {
+           // Código del método
+       }
+   }
+   */
+
+class animal {
+    constructor(especie,edad,color){
+        this.especie = especie;
+        this.edad = edad;
+        this.color = color;
+        this.info = `Soy ${this.especie}, Tengo ${this.edad} años y soy de color ${this.color}.`;
+    };
+};
+let perro = new animal("perro",5,"blanco");
+console.log(perro.info);
+
+//Metodos
+/* Un método es una función definida dentro de una clase que puede ser llamada en los objetos creados a partir de esa clase.
+   La sintaxis básica es:
+   class NombreClase {
+       constructor(parametros) {
+           // Inicialización de propiedades
+       }
+       metodo() {
+           // Código del método
+       }
+   }
+   */
+class persona {
+    constructor(nombre,edad,altura){
+        this.nombre = nombre;
+        this.edad = edad;
+        this.altura = altura;
+        this.info = `Hola! Soy ${this.nombre}, Tengo ${this.edad} años y mi altura es ${this.altura}.`;
+    };
+    verInfo(){ // Método para mostrar la información de la persona
+        console.log(this.info)
+    }
+}
+let kevin = new persona("Kevin Moreno",20,"1.60cm")
+kevin.verInfo();
