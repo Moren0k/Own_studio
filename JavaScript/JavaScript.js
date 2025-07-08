@@ -1,4 +1,6 @@
 //JavaScript - Conceptos Básicos
+/* JavaScript es un lenguaje de programación interpretado, de alto nivel y con tipado dinámico. */
+/* Se utiliza principalmente para crear páginas web interactivas y dinámicas. */
 
 //CamelCase
 /* Ejemplo de uso de CamelCase
