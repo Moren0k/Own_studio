@@ -325,6 +325,46 @@ class persona {
     verInfo(){ // Método para mostrar la información de la persona
         console.log(this.info)
     }
+    caminar(){ // Método para simular que la persona camina
+        console.log(`${this.nombre} está caminando.`)
+    }
+    ladrar(){
+        if (this.nombre === "perro") {
+            console.log(`${this.nombre} está ladrando.`)
+        }
+        else {
+            console.log(`${this.nombre} no puede ladrar porque no es un perro.`)
+        }
+    }
 }
-let kevin = new persona("Kevin Moreno",20,"1.60cm")
-kevin.verInfo();
+let kevin = new persona("Kevin Moreno",20,"1.60cm") // Crea una instancia de la clase persona
+kevin.verInfo(); // Muestra la información de la persona en la consola
+kevin.caminar(); // Llama al método caminar de la persona
+let perros = new persona("perro",5,"blanco"); // Crea una instancia de la clase persona con el nombre "perro"
+kevin.ladrar(); // Llama al método ladrar de la persona devuelve "Kevin Moreno no puede ladrar porque no es un perro."
+perros.ladrar(); // Llama al método ladrar de la persona devuelve "perro está ladrando."
+
+//Herencia
+/* La herencia permite que una clase herede propiedades y métodos de otra clase.
+   La sintaxis básica es:
+   class ClaseBase {
+       constructor(parametros) {
+           // Inicialización de propiedades
+       }
+       metodo() {
+           // Código del método
+       }
+   }*/
+
+class humano extends persona { // La clase humano hereda de la clase persona
+    constructor(nombre,edad,altura){
+        super(nombre,edad,altura); // Llama al constructor de la clase base
+    }
+    diceLaEdad(){
+        console.log(`${this.nombre} tiene ${this.edad} años.`);
+    }
+}
+
+let juan = new humano("Kevin Moreno",20,"1.60cm"); // Crea una instancia de la clase humano
+juan.diceLaEdad(); // Llama al método diceLaEdad de la persona devuelve "Kevin Moreno tiene 20 años."
+

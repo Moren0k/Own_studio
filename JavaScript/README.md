@@ -201,8 +201,6 @@ La sintaxis básica es:.
 };
 ```
 
-**Ejemplo/:**
-
 ```js
 contador = 0; // Inicializa un contador
 while (contador < 5) { // Mientras el contador sea menor que 5
@@ -221,8 +219,6 @@ La sintaxis básica es:.
         // Código a ejecutar
     } while (condicion);
 ```
-
-**Ejemplo/:**
 
 ```js
 contador = 0; // Inicializa un contador
@@ -260,8 +256,6 @@ La sintaxis básica es:
    }.
 ```
 
-**Ejemplo/:**
-
 ```js
 for (let incremento = 0; incremento < 6; incremento++) {
     console.log(incremento); // Muestra los números del 0 al 5 en la consola
@@ -295,8 +289,6 @@ La sintaxis básica es:
    }.
 ```
 
-**Ejemplo/:**
-
 ```js
 let objeto = ["valor1", "valor2", "valor3"];
 for (let i in objeto) {
@@ -316,8 +308,6 @@ La sintaxis básica es:
    }.
 ```
 
-**Ejemplo/:**
-
 ```js
 let iterable = ["valor1", "valor2", "valor3"];
 for (let valor of iterable) {
@@ -336,8 +326,6 @@ La sintaxis básica es:
        // Código a ejecutar
    }.
 ```
-
-**Ejemplo/:**
 
 ```js
 function saludar() {
@@ -359,8 +347,6 @@ La sintaxis básica es:
        return valor; // Devuelve un valor
    }.
 ```
-
-**Ejemplo/:**
 
 ```js
 function sumar() {
@@ -385,8 +371,6 @@ La sintaxis básica es:
        return valor; // Devuelve un valor
    }.
 ```
-
-**Ejemplo/:**
 
 ```js
 function multiplicar(numero1, numero2) {
@@ -413,8 +397,6 @@ La sintaxis básica es:
     }.
 ```
 
-**Ejemplo/:**
-
 ```js
 const saludarFlecha = (nombre) => console.log("Hola, " + nombre);
     // Llamada a la función flecha
@@ -440,8 +422,6 @@ La sintaxis básica es:
        }
    }.
 ```
-
-**Ejemplo/:**
 
 ```js
 class animal {
@@ -472,8 +452,6 @@ La sintaxis básica es:
    }.
 ```
 
-**Ejemplo/:**
-
 ```js
 class persona {
     constructor(nombre,edad,altura){
@@ -485,7 +463,24 @@ class persona {
     verInfo(){ // Método para mostrar la información de la persona
         console.log(this.info)
     }
+    caminar(){ // Método para simular que la persona camina
+        console.log(`${this.nombre} está caminando.`)
+    }
+    ladrar(){
+        if (this.nombre === "perro") {
+            console.log(`${this.nombre} está ladrando.`)
+        }
+        else {
+            console.log(`${this.nombre} no puede ladrar porque no es un perro.`)
+        }
+    }
 }
-let kevin = new persona("Kevin Moreno",20,"1.60cm")
-kevin.verInfo();
+let kevin = new persona("Kevin Moreno",20,"1.60cm") // Crea una instancia de la clase persona
+kevin.verInfo(); // Muestra la información de la persona en la consola
+kevin.caminar(); // Llama al método caminar de la persona
+let perros = new persona("perro",5,"blanco"); // Crea una instancia de la clase persona con el nombre "perro"
+kevin.ladrar(); // Llama al método ladrar de la persona devuelve "Kevin Moreno no puede ladrar porque no es un perro."
+perros.ladrar(); // Llama al método ladrar de la persona devuelve "perro está ladrando."
 ```
+
+## Herencia
