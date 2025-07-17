@@ -354,8 +354,7 @@ perros.ladrar(); // Llama al método ladrar de la persona devuelve "perro está 
        metodo() {
            // Código del método
        }
-   }*/
-
+   } */
 class humano extends persona { // La clase humano hereda de la clase persona
     constructor(nombre,edad,altura){
         super(nombre,edad,altura); // Llama al constructor de la clase base
@@ -368,3 +367,87 @@ class humano extends persona { // La clase humano hereda de la clase persona
 let juan = new humano("Kevin Moreno",20,"1.60cm"); // Crea una instancia de la clase humano
 juan.diceLaEdad(); // Llama al método diceLaEdad de la persona devuelve "Kevin Moreno tiene 20 años."
 
+// Métodos De Cadenas
+/* Para usar los métodos con la cadena, se puede utilizar la sintaxis:
+   cadena.metodo(); */
+let cadena = "Hola, Mundo!";
+cadena.length; // Devuelve la longitud de la cadena. #Muestra 13
+cadena.charAt(0); // Devuelve el carácter en la posición 0 de la cadena. #Muestra "H"
+cadena.concat(" Adiós!"); // Concatena una cadena al final de la cadena original. #Muestra "Hola, Mundo! Adiós!"
+cadena.startsWith("Hola"); // Verifica si la cadena comienza con "Hola". #Muestra true
+cadena.endsWith("Mundo!"); // Verifica si la cadena termina con "Mundo!". #Muestra true
+cadena.includes("Mundo"); // Verifica si la cadena contiene "Mundo". #Muestra true
+cadena.indexOf("M"); // Devuelve la posición de la primera aparición de "M" en la cadena. #Muestra 6
+cadena.lastIndexOf("o"); // Devuelve la posición de la última aparición de "o" en la cadena. #Muestra 10
+
+cadena.padStart(10, "*"); // Agrega asteriscos al inicio de la cadena hasta que tenga una longitud de 10. #Muestra "*****Hola, Mundo!"
+cadena.padEnd(10, "*"); // Agrega asteriscos al final de la cadena hasta que tenga una longitud de 10. #Muestra "Hola, Mundo!*****"
+cadena.repeat(2); // Repite la cadena 2 veces. #Muestra "Hola, Mundo!Hola, Mundo!"
+
+cadena.split(","); // Divide la cadena en un array utilizando "," como separador. #Muestra ["Hola", " Mundo!"]
+cadena.substring(0, 5); // Extrae una parte de la cadena desde el índice 0 hasta el 5. #Muestra "Hola, "
+cadena.slice(0, 5); // Extrae una parte de la cadena desde el índice 0 hasta el 5. #Muestra "Hola "
+
+cadena.toLowerCase(); // Convierte la cadena a minúsculas. #Muestra "hola, mundo!"
+cadena.toUpperCase(); // Convierte la cadena a mayúsculas. #Muestra "HOLA, MUNDO!"
+
+let cadena1 = " Hola, Mundo! ";
+cadena1.trim(); // Elimina los espacios en blanco al inicio y al final de la cadena. #Muestra "Hola, Mundo!"
+cadena1.trimStart(); // Elimina los espacios en blanco al inicio de la cadena. #Muestra "Hola, Mundo! "
+cadena1.trimEnd(); // Elimina los espacios en blanco al final de la cadena. #Muestra " Hola, Mundo!"
+
+let num = 123.456;
+num.toString(); // Convierte el número a cadena de texto. #Muestra "123.456"
+num.toFixed(1); // Formatea el número a una cadena con 1 decimal. #Muestra "123.5"
+
+// Métodos de arrays
+/* Los métodos de arrays se aplican igual que los métodos de cadenas, pero se utilizan en arrays */
+let metodosArrayNumeros = [1, 2, 3, 4, 5];
+let metodosArrayCadenas = ["Hola", "Mundo", "JavaScript"];
+
+metodosArrayNumeros.pop(); // Elimina el último elemento del array y lo devuelve. #Muestra 5
+metodosArrayNumeros.shift(); // Elimina el primer elemento del array y lo devuelve. #Muestra 1
+metodosArrayNumeros.push(6); // Agrega un elemento al final del array. // Ahora el array es [2, 3, 4, 5, 6]
+metodosArrayNumeros.unshift(0); // Agrega un elemento al inicio del array. // Ahora el array es [0, 2, 3, 4, 5, 6]
+metodosArrayNumeros.reverse(); // Invierte el orden de los elementos del array // Ahora el array es [6, 5, 4, 3, 2, 0]
+metodosArrayNumeros.sort(); // Ordena los elementos del array en orden ascendente // Ahora el array es [0, 2, 3, 4, 5, 6]
+metodosArrayNumeros.splice(1, 2); // Elimina 2 elementos a partir del índice 1 // Ahora el array es [0, 4, 5, 6]
+metodosArrayNumeros.splice(1, 0, 3); // Inserta el número 3 en el índice 1 sin eliminar ningún elemento // Ahora el array es [0, 3, 4, 5, 6]
+metodosArrayNumeros.splice(0, 1, 2); // Reemplaza el elemento en la posición (0) por 2 // Ahora el array es [2, 3, 4, 5, 6]
+
+/* Métodos Accesores */
+metodosArrayCadenas.join(", "); // Une los elementos del array en una cadena de texto, separados por ", ". #Muestra "Hola, Mundo, JavaScript"
+metodosArrayCadenas.slice(0, 2); // Extrae una parte del array desde el índice 0 hasta el 2 (sin incluir el 2). #Muestra ["Hola", "Mundo"]
+
+metodosArrayCadenas.includes("Mundo"); // Verifica si el array contiene el elemento "Mundo". #Muestra true
+metodosArrayCadenas.indexOf("JavaScript"); // Devuelve la posición del primer elemento "JavaScript" en el array. #Muestra 2
+metodosArrayCadenas.lastIndexOf("Hola"); // Devuelve la posición del último elemento "Hola" en el array. // Muestra 0
+
+/* Métodos De Repetición */
+metodosArrayCadenas.filter(elemento => elemento.length > 6); // Filtra los elementos del array que tienen una longitud mayor a 6. #Muestra ["JavaScript"]
+
+// Objeto Math - Básico
+/* El objeto Math proporciona propiedades y métodos para realizar operaciones matemáticas.
+   Se utiliza directamente sin necesidad de crear una instancia.
+   Algunos de sus métodos más comunes son: */
+let numeroMath = 20;
+Math.sqrt(numeroMath); // Devuelve la raíz cuadrada del número. #Muestra 4.47213595499958
+Math.cbrt(numeroMath); // Devuelve la raíz cúbica del número. #Muestra 2.7144176165949063
+
+Math.max(1, 2, 3); // Devuelve el valor máximo de los números proporcionados. #Muestra 3
+Math.min(1, 2, 3); // Devuelve el valor mínimo de los números proporcionados. #Muestra 1
+Math.random(); // Devuelve un número pseudo aleatorio entre 0 (incluido) y 1 (excluido). #Muestra un número aleatorio
+Math.round(5.999999); // Redondea un número al entero más cercano. #Muestra 6
+Math.floor(5.999999); // Redondea un número hacia abajo al entero más cercano. #Muestra 5
+Math.ceil(5.000001); // Redondea un número hacia arriba al entero más cercano. #Muestra 6
+Math.trunc(5.999999); // Redondea un número hacia cero al entero más cercano. #Muestra 5
+
+/* Propiedades */
+Math.PI; // Devuelve el valor de PI. #Muestra 3.141592653589793
+Math.E; // Devuelve el valor de e. #Muestra 2.718281828459045
+Math.LN2; // Devuelve el logaritmo natural de 2. #Muestra 0.6931471805599453
+Math.LN10; // Devuelve el logaritmo natural de 10. #Muestra 2.302585092994046
+Math.LOG2E; // Devuelve el logaritmo en base 2 de e. #Muestra 1.442695040888963
+Math.LOG10E; // Devuelve el logaritmo en base 10 de e. #Muestra 0.4342944819032518
+Math.SQRT1_2; // Devuelve la raíz cuadrada de 1/2. #Muestra 0.7071067811865476
+Math.SQRT2; // Devuelve la raíz cuadrada de 2. #Muestra 1.4142135623730951
