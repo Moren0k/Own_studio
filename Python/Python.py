@@ -19,7 +19,7 @@ nombre_completo = "Jhos Kevin Agudelo Moreno"
 # OPERADORES ARITMÉTICOS
 # -----------------------
 """
-+ Suma -> a + b
++ Suma -> a + ba
 - Resta -> a - b
 * Multiplicación -> a * b
 / División -> a / b
