@@ -1,120 +1,128 @@
-# Bases de datos NoSQL – Comandos MongoDB
+# Bases de datos NoSQL
 
 ---
 
-### Comandos Crear
+## Comandos basicos (Mostrar,Crear,Modificar,Eliminar)
 
+**Consultar las bases de datos.**
+Muestra todas las bases de datos disponibles.
 
-##### Crear o usar una base de datos
+```js
+show dabases
+```
+
+**Crear o usar una base de datos.**
 Selecciona o crea una base de datos para trabajar en ella.
+
 ```js
 use nombreBaseDeDatos
 ```
 
-##### Crear una colección explícitamente
-Crea una colección (o tabla) vacía manualmente antes de agregar documentos.
-```js
-db.createCollection("nombreCollection")
-```
-
----
-
-### Comandos Insertar o agregar
-
-##### Insertar un documento en una colección
-Agrega un solo documento a una colección existente.
-```js
-db.nombreCollection.insertOne({ clave: "valor" })
-```
-
-##### Insertar varios documentos
-Agrega múltiples documentos a la colección en una sola operación.
-```js
-db.nombreCollection.insertMany([
-  { clave1: "valor1" },
-  { clave2: "valor2" },
-  { clave3: "valor3" }
-])
-```
-
----
-
-### Comandos Modificar
-
-##### Modificar un documento
-Actualiza el primer documento que coincida con el filtro dado.
-```js
-db.nombreCollection.updateOne(
-  { clave: "valor" },
-  { $set: { claveModificar: "nuevoValor" } }
-)
-```
-
-##### Modificar varios documentos
-Actualiza todos los documentos que cumplan el filtro especificado.
-```js
-db.nombreCollection.updateMany(
-  { clave: "valor" },
-  { $set: { claveModificar: "nuevoValor" } }
-)
-```
-
----
-
-### Comandos Eliminar
-
-##### Eliminar un documento
-Elimina el primer documento que coincida con el filtro indicado.
-```js
-db.nombreCollection.deleteOne({ clave: "valor" })
-```
-
-##### Eliminar varios documentos
-Elimina todos los documentos que coincidan con el filtro dado.
-```js
-db.nombreCollection.deleteMany({ clave: "valor" })
-```
-
-##### Eliminar una colección
-Borra completamente una colección y sus documentos.
-```js
-db.nombreCollection.drop()
-```
-
-##### Eliminar una base de datos
+**Eliminar una base de datos**
 Elimina la base de datos actualmente seleccionada por completo.
+
 ```js
 db.dropDatabase()
 ```
 
 ---
 
-### Comandos Mostrar
+## Colecciones
 
-##### Consultar las bases de datos
+**Consultar las colecciones.**
+Muestra toda las colecciones que hay en la base de datos actual.
+
 ```js
-show dabases
+show collections
 ```
 
-##### Consultar las colecciones
-Muestra todas las coleeciones que hay en la base de datos actual
+**Crear una colección explícitamente.**
+Crea una colección vacía manualmente antes de agregar documentos.
+
 ```js
-show collection
+db.createCollection("nombreCollection")
 ```
 
-##### Consultar todos los documentos
+**Eliminar una colección**
+Borra completamente una colección y sus documentos.
+
+```js
+db.nombreCollection.drop()
+```
+
+---
+
+## Documentos
+
+**Consultar todos los documentos**
 Muestra todos los documentos guardados en la colección.
+
 ```js
 db.nombreCollection.find()
 ```
 
-##### Consultar documentos con filtro
+**Consultar documentos con filtro**
 Recupera documentos que cumplen con una condición específica.
+
 ```js
 db.nombreCollection.find({ clave: "valor" })
 ```
 
-##### Operadores de comparacion para filtrar número en MongoDB
+**Insertar un documento en una colección.**
+Agrega un solo documento a una colección existente.
+
+```js
+db.nombreCollection.insertOne({ clave: "valor" })
+```
+
+**Insertar varios documentos**
+Agrega múltiples documentos a una colección en una sola operación.
+
+```js
+db.nombreCollection.insertMany([
+    { clave1: "valor1" },
+    { clave2: "valor2" },
+    { clave3: "valor3" }
+])
+```
+
+**Modificar un documento**
+Actualiza el primer documento que coincida con el filtro dado.
+
+```js
+db.nombreCollection.updateOne(
+    { clave: "valor" },
+    { $set: { claveModificar: "nuevoValor" } }
+)
+```
+
+**Modificar varios documentos**
+Actualiza todos los documentos que cumplan el filtro especificado.
+
+```js
+db.nombreCollection.updateMany(
+    { clave: "valor" },
+    { $set: { claveModificar: "nuevoValor" } }
+)
+```
+
+**Eliminar un documento/tabla**
+Elimina el primer documento que coincida con el filtro indicado.
+
+```js
+db.nombreCollection.deleteOne({ clave: "valor" })
+```
+
+**Eliminar varios documentos**
+Elimina todos los documentos que coincidan con el filtro dado.
+
+```js
+db.nombreCollection.deleteMany({ clave1: "valor1" })
+```
+
+---
+
+## Operadores de comparacion para filtrar
 
 ```$eq``` (Equal - Es igual)
 Encuentra los documentos donde el valor es equivalente al num especificado
@@ -137,11 +145,7 @@ Encuentra los documentos donde el valor es menor al num especificado.
 ```$lte``` y ```$gte``` (Less Than or Equal [Menor o igual a] - Greather Than or Equal [Mayor o igual a]
 Funcionan exactamente igual que los anteriores sin la "e", solo que se incluye el valor en si mismo.
 
-
-
 ```$ne``` (Not Equal - No es igual)
 ```js
 { "valor": { "$ne": num } } // Devuelve todos los documentos en donde el valor de la clave NO sea num
 ```
-
-##### Aggregate

@@ -1,33 +1,44 @@
-# -----------------------
-# VARIABLES Y TIPOS DE DATOS
-# -----------------------
 
+# Fundamentos de Python
+
+---
+
+## Variables y Tipos de Datos
+
+**Declaración de variables básicas**  
+Diferentes tipos de datos en Python.
+
+```python
 str = "Texto"
 int = 10
 float = 9.5
 bool = True, False
+```
 
-# Variables
+**Asignación de variables**  
+Usamos `=` para asignar un valor.
+
+```python
 nombre_variable = "Dato para almacenar"
+```
 
-# camelCase
-NombreCompleto = "Jhos Kevin Agudelo Moreno"
+**Convenciones para nombres de variables**
+
+```python
+# camelCase (menos usado en Python)
+NombreCompleto = "JhosKevinAgudeloMoreno"
+
 # snake_case (RECOMENDADO)
-nombre_completo = "Jhos Kevin Agudelo Moreno"
+nombre_completo = "jhos_kevin_agudelo_moreno"
+```
 
-# -----------------------
-# OPERADORES ARITMÉTICOS
-# -----------------------
-"""
-+ Suma -> a + ba
-- Resta -> a - b
-* Multiplicación -> a * b
-/ División -> a / b
-% Módulo -> a % b
-** Exponente -> a ** b
-// División baja -> a // b
-"""
+---
 
+## Operadores Aritméticos
+
+**Operaciones básicas**
+
+```python
 a = 2
 b = 3
 
@@ -40,19 +51,30 @@ exponente = a ** b
 division_baja = a // b
 
 print(suma, resta, multiplicacion, division, modulo, exponente, division_baja)
+```
 
-# -----------------------
-# STRINGS
-# -----------------------
+---
 
+## Strings
+
+**Concatenación y f-strings**
+
+```python
 bienvenida = "Hola " + nombre_completo + " ¿Como estas?"
 bienvenida = f"Hola {nombre_completo} ¿Como estas?"
 print(bienvenida)
+```
 
-# Operadores de pertenencia
+**Operadores de pertenencia**
+
+```python
 print("Kevin" in bienvenida)
 print("Kevin" not in bienvenida)
+```
 
+**Métodos útiles para cadenas**
+
+```python
 chain = "jhos Kevin agudelo Moreno   "
 
 mayus = chain.upper()
@@ -68,44 +90,41 @@ starts_with = chain.startswith("jhos")
 end_with = chain.endswith(" ")
 replace = chain.replace("jhos", "Hola")
 separate = chain.split(",")
+```
 
-# -----------------------
-# OPERADORES LÓGICOS
-# -----------------------
+---
 
+## Operadores Lógicos
+
+```python
 # AND
-True & True     # True
-False & True    # False
-True & False    # False
-False & False   # False
+True and True     # True
+False and True    # False
 
 # OR
-True | True     # True
-False | True    # True
-True | False    # True
-False | False   # False
+True or False     # True
 
 # NOT
-not True        # False
-not False       # True
+not True          # False
+```
 
-# -----------------------
-# ESTRUCTURAS DE CONTROL
-# -----------------------
+---
 
+## Estructuras de Control
+
+**Condicionales if, elif, else**
+
+```python
 age = 9
 if age <= 18:
     print("Eres menor")
 else:
     print("Eres mayor")
+```
 
-password = "123"
-enter_password = "1234"
-if enter_password == password:
-    print("Contraseña correcta")
-else:
-    print("Contraseña incorrecta")
+**Condicional anidado**
 
+```python
 income = 200
 bills = 200
 if income >= 10000:
@@ -118,11 +137,13 @@ elif income >= 200:
         print("Ganas poco y gastas mucho")
 else:
     print("Ganas mal -5k")
+```
 
-# -----------------------
-# LISTAS
-# -----------------------
+---
 
+## Listas
+
+```python
 lista = ["Jhos Kevin", "Agudelo Moreno", True, 20, 1.60]
 print(lista[1])  # Acceso por índice
 lista[2] = False  # Modificar
@@ -133,26 +154,32 @@ count_list = len(list)
 list.append("NewElement3")
 list.insert(2, "NewElementIn2Position")
 list.extend(["NewElement4", "NewElement5"])
+```
 
-# -----------------------
-# TUPLAS
-# -----------------------
+---
 
+## Tuplas
+
+```python
 tupla = ("Jhos Kevin", "Agudelo Moreno", True, 20, 1.60)
 print(tupla)
 # tupla[2] = False  # ERROR: no se pueden modificar
+```
 
-# -----------------------
-# CONJUNTOS
-# -----------------------
+---
 
+## Conjuntos
+
+```python
 conjunto = {"Jhos Kevin", "Agudelo Moreno", True, 20, 1.60}
 # No índices, no duplicados
+```
 
-# -----------------------
-# DICCIONARIOS
-# -----------------------
+---
 
+## Diccionarios
+
+```python
 diccionario = {
     "nombre": "Jhos Kevin",
     "Apellido": "Agudelo Moreno",
@@ -161,3 +188,4 @@ diccionario = {
     "estatura": "1.60"
 }
 print(diccionario["nombre"])
+```
