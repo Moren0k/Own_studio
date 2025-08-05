@@ -2,6 +2,13 @@
 
 ---
 
+**Limpiar la consola.**
+Muestra todas las bases de datos disponibles.
+
+```js
+cls
+```
+
 ## Comandos basicos (Mostrar,Crear,Modificar,Eliminar)
 
 **Consultar las bases de datos.**
@@ -18,7 +25,7 @@ Selecciona o crea una base de datos para trabajar en ella.
 use nombreBaseDeDatos
 ```
 
-**Eliminar una base de datos**
+**Eliminar una base de datos.**
 Elimina la base de datos actualmente seleccionada por completo.
 
 ```js
@@ -54,14 +61,14 @@ db.nombreCollection.drop()
 
 ## Documentos
 
-**Consultar todos los documentos**
+**Consultar todos los documentos.**
 Muestra todos los documentos guardados en la colección.
 
 ```js
 db.nombreCollection.find()
 ```
 
-**Consultar documentos con filtro**
+**Consultar documentos con filtro.**
 Recupera documentos que cumplen con una condición específica.
 
 ```js
@@ -75,7 +82,7 @@ Agrega un solo documento a una colección existente.
 db.nombreCollection.insertOne({ clave: "valor" })
 ```
 
-**Insertar varios documentos**
+**Insertar varios documentos.**
 Agrega múltiples documentos a una colección en una sola operación.
 
 ```js
@@ -86,7 +93,7 @@ db.nombreCollection.insertMany([
 ])
 ```
 
-**Modificar un documento**
+**Modificar un documento.**
 Actualiza el primer documento que coincida con el filtro dado.
 
 ```js
@@ -96,7 +103,7 @@ db.nombreCollection.updateOne(
 )
 ```
 
-**Modificar varios documentos**
+**Modificar varios documentos.**
 Actualiza todos los documentos que cumplan el filtro especificado.
 
 ```js
@@ -106,14 +113,14 @@ db.nombreCollection.updateMany(
 )
 ```
 
-**Eliminar un documento/tabla**
+**Eliminar un documento/tabla.**
 Elimina el primer documento que coincida con el filtro indicado.
 
 ```js
 db.nombreCollection.deleteOne({ clave: "valor" })
 ```
 
-**Eliminar varios documentos**
+**Eliminar varios documentos.**
 Elimina todos los documentos que coincidan con el filtro dado.
 
 ```js
@@ -122,7 +129,7 @@ db.nombreCollection.deleteMany({ clave1: "valor1" })
 
 ---
 
-## Operadores de comparacion para filtrar
+## Operadores de comparacion para filtrar.
 
 ```$eq``` (Equal - Es igual)
 Encuentra los documentos donde el valor es equivalente al num especificado
