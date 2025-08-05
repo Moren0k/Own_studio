@@ -148,6 +148,11 @@ Encuentra los documentos donde el valor es menor al num especificado.
 ```$lte``` y ```$gte``` (Less Than or Equal [Menor o igual a] - Greather Than or Equal [Mayor o igual a]
 Funcionan exactamente igual que los anteriores sin la "e", solo que se incluye el valor en si mismo.
 
+```js
+{ "clave": { "$gte": num } } // Me va a devolver todos los documentos donde el valor de la clave sea mayor o igual a num
+{ "clave": { "$lte": num } } // Me va a devolver todos los documentos donde el valor de la clave sea menor o igual a num
+```
+
 ```$ne``` (Not Equal - No es igual)
 
 ```js
