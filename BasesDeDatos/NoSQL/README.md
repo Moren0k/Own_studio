@@ -126,18 +126,21 @@ db.nombreCollection.deleteMany({ clave1: "valor1" })
 
 ```$eq``` (Equal - Es igual)
 Encuentra los documentos donde el valor es equivalente al num especificado
+
 ```js
 { "clave": { "$eq": num } } // Me va a devolver todos los documentos donde el valor de la clave sea igual a num
 ```
 
 ```$gt``` (Greather Than - Mayor que)
 Encuentra los documentos donde el valor es mayor que el num especificado.
+
 ```js
 { "clave": { "$gt": num } } // Me va a devolver todos los documentos donde el valor de la clave sea mayor a num
 ```
 
 ```$lt``` (Less Than - Menor que)
 Encuentra los documentos donde el valor es menor al num especificado.
+
 ```js
 { "clave": { "$lt": num } } // Me va a devolver todos los documentos donde el valor de la clave sea menor a num
 ```
@@ -146,6 +149,7 @@ Encuentra los documentos donde el valor es menor al num especificado.
 Funcionan exactamente igual que los anteriores sin la "e", solo que se incluye el valor en si mismo.
 
 ```$ne``` (Not Equal - No es igual)
+
 ```js
 { "valor": { "$ne": num } } // Devuelve todos los documentos en donde el valor de la clave NO sea num
 ```
